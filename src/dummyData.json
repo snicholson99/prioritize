@@ -1,0 +1,44 @@
+{
+  "users (created by Firebase login)": ["1", "2", "3"],
+  "tasks": [
+    {
+      "id": "a",
+      "user_id": "1",
+      "title": "Wash Car",
+      "category": "Personal",
+      "tags": ["car"],
+      "notes": "",
+      "full_hours_estimate": 1,
+      "remaining_hours_estimate": 1,
+      "is_complete": false,
+      "is_high_priority": false,
+      "is_blocked": false
+    },
+    {
+      "id": "b",
+      "user_id": "1",
+      "title": "Fix Tests",
+      "category": "Work",
+      "tags": ["campaignTests"],
+      "notes": "",
+      "full_hours_estimate": 1.5,
+      "remaining_hours_estimate": 1.5,
+      "is_complete": false,
+      "is_high_priority": true,
+      "is_blocked": false
+    },
+    {
+      "id": "c",
+      "user_id": "2",
+      "title": "Update Starter Docs",
+      "category": "Work",
+      "tags": ["newStarter", "coda"],
+      "notes": "",
+      "full_hours_estimate": 4,
+      "remaining_hours_estimate": 3,
+      "is_complete": false,
+      "is_high_priority": true,
+      "is_blocked": false
+    }
+  ]
+}
