@@ -1,15 +1,14 @@
 import firebase from 'firebase';
-import { GOOGLE_API_KEY } from './config.js';
 
 const config = {
-  apiKey: GOOGLE_API_KEY,
-  authDomain: "prioritize-ca259.firebaseapp.com",
-  projectId: "prioritize-ca259",
-  storageBucket: "prioritize-ca259.appspot.com",
-  messagingSenderId: "175679780830",
-  appId: "1:175679780830:web:d3b58ee41b7fbf844c8f4f",
-  measurementId: "G-N6HE2HR7P4",
-  databaseURL: "https://prioritize-ca259-default-rtdb.europe-west1.firebasedatabase.app"
+  apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
+  authDomain: process.env.REACT_APP_GOOGLE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_GOOGLE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_GOOGLE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_GOOGLE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_GOOGLE_APP_ID,
+  measurementId: process.env.REACT_APP_GOOGLE_MEASUREMENT_ID,
+  databaseURL: process.env.REACT_APP_GOOGLE_DATABASE_URL
 };
 
 firebase.initializeApp(config);

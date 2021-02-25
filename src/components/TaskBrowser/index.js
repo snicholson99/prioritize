@@ -1,31 +1,30 @@
-import { Component } from 'react';
+import { useEffect } from 'react';
 
 import TaskBar from '../TaskBar';
 import Tasks from '../Tasks';
 
-class TaskBrowser extends Component {
-  componentDidMount() {
-    this.props.filterTasks('all', this.props.userId);
-  }
+const TaskBrowser = (props) => {
+  const {
+    filterTasks,
+    onNewTaskClick,
+    user,
+    users,
+    userId,
+    filteredTasks,
+    removeTask,
+  } = props;
 
-  render() {
-    const {
-      filterTasks,
-      onNewTaskClick,
-      user,
-      users,
-      userId,
-      filteredTasks,
-      removeTask,
-    } = this.props;
+  useEffect(() => {
+    filterTasks('all', userId);
+  }, [filterTasks, userId]);
 
-    return (
-      <>
-        <TaskBar {...{userId, filterTasks, onNewTaskClick}}/>
-        <Tasks {...{user, filteredTasks, users, removeTask}}/>
-      </>
-    );
-  }
+  return (
+    <>
+      <TaskBar {...{ userId, filterTasks, onNewTaskClick }}/>
+      <Tasks {...{ user, filteredTasks, users, removeTask }}/>
+    </>
+  );
+
 }
 
 export default TaskBrowser;

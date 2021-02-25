@@ -1,7 +1,7 @@
 {
   "users (created by Firebase login)": ["1", "2", "3"],
-  "tasks": [
-    {
+  "tasks": {
+    "a": {
       "id": "a",
       "user_id": "1",
       "title": "Wash Car",
@@ -14,7 +14,7 @@
       "is_high_priority": false,
       "is_blocked": false
     },
-    {
+    "b": {
       "id": "b",
       "user_id": "1",
       "title": "Fix Tests",
@@ -27,7 +27,7 @@
       "is_high_priority": true,
       "is_blocked": false
     },
-    {
+    "c": {
       "id": "c",
       "user_id": "2",
       "title": "Update Starter Docs",
@@ -40,5 +40,5 @@
       "is_high_priority": true,
       "is_blocked": false
     }
-  ]
+  }
 }

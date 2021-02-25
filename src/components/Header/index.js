@@ -1,9 +1,31 @@
 import { Link } from 'react-router-dom';
 
+import { auth, provider } from '../../firebase.js';
 import './style.css';
 
+const login = () => {
+  auth.signInWithPopup(provider)
+    // .then((result) => {
+    //   const user = result.user;
+    //   this.setState({
+    //     user
+    //   }, () => {
+
+    //   });
+    // });
+}
+
+const logout = () => {
+  auth.signOut()
+    // .then(() => {
+    //   this.setState({
+    //     user: null
+    //   });
+    // });
+}
+
 const Header = (props) => {
-  const { user, login, logout } = props;
+  const { user } = props;
   return (
     <header className="Header">
       <Link to="/" className="title">
